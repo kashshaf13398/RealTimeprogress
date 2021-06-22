@@ -20,15 +20,15 @@
     <link rel="apple-touch-icon" href="#" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="frontend/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
     <!-- Pogo Slider CSS -->
-    <link rel="stylesheet" href="frontend/css/pogo-slider.min.css" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/pogo-slider.min.css')  }}" />
     <!-- Site CSS -->
-    <link rel="stylesheet" href="frontend/css/style.css" />
+    <link rel="stylesheet" href="{{  asset('frontend/css/style.css')  }}" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="frontend/css/responsive.css" />
+    <link rel="stylesheet" href="{{  asset('frontend/css/responsive.css')  }}" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="frontend/css/custom.css" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/custom.css'  )}}" />
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -52,7 +52,7 @@
     <header class="top-header">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.blade.php"><img src="frontend/images/i2.png" alt="image"></a>
+                <a class="navbar-brand" href="index.blade.php"><img src="{{ asset('frontend/images/i2.png'  )}}" alt="image"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -101,7 +101,7 @@
                 <div class="search-box">
                     <input type="text" class="search-txt" placeholder="Search">
                     <a class="search-btn">
-                        <img src="frontend/images/search_icon.png" alt="#" />
+                        <img src="{{ asset('frontend/images/search_icon.png'  )}}" alt="#" />
                     </a>
                 </div>
             </div>

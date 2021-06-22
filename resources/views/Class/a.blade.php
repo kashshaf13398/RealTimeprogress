@@ -52,7 +52,7 @@
     <header class="top-header">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src= "{{ asset('frontend/images/i2.png'  )}}" alt="image"></a>
+                <a class="navbar-brand" href="#"><img src="frontend/images/i2.png" alt="image"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -99,7 +99,7 @@
                 <div class="search-box">
                     <input type="text" class="search-txt" placeholder="Search">
                     <a class="search-btn">
-                        <img src="{{ asset('frontend/images/search_icon.png'  )}}" alt="#" />
+                        <img src="frontend/images/search_icon.png" alt="#" />
                     </a>
                 </div>
             </div>
@@ -112,7 +112,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="pogoSlider" id="js-main-slider">
-                    <div class="pogoSlider-slide" style="background-image:url({{ asset('frontend/images/banner_img.png'  )}});">
+                    <div class="pogoSlider-slide" style="background-image:url(frontend/images/banner_img.png);">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
@@ -128,7 +128,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pogoSlider-slide" style="background-image:url({{ asset('frontend/images/banner_img.png'  )}});">
+                    <div class="pogoSlider-slide" style="background-image:url(frontend/images/banner_img.png);">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
