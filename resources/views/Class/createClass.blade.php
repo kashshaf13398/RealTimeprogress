@@ -11,6 +11,15 @@
                  </div> -->
                  <div class="layout_padding col-lg-6 col-md-6 col-sm-12">
                     <div class="contact_form">
+                     @if ($errors->any())
+                        <div class="alert alert-danger">
+                           <ul>
+                              @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                              @endforeach
+                           </ul>
+                        </div>
+                     @endif
                         <form action="{{ url('/store/class') }}" method="post">
                             @csrf
                            <fieldset>

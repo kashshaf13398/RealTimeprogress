@@ -30,3 +30,13 @@ Route::get('/about/more','BoloController@aboutMore')->name('about.more');
 Route::get('/create/class','BoloController@createClass')->name('create.class');
 
 Route::post('/store/class','ClassController@storeClass')->name('store.class');
+
+Route::get('/courses/dynamic','ClassController@getCourse');
+
+Route::get('/view/courses/{id}','ClassController@getInCourse');
+
+Route::post('/store/student/{id}','ClassController@storeStudent')->name('store.student');
+
+Route::get('/take/attendance/{id}','AttendanceController@takeAttendance')->name('take.attendance');
+
+Route::post('/store/attendance/{id}','AttendanceController@storeAttendance')->name('store.attendancet');
