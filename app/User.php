@@ -45,7 +45,10 @@ class User extends Authenticatable
         return $this->hasMany(classes::class,'id','User_id');
     }
     public function attendace(){
-        return $this->hasMany(Attendance::class,'id', 'class_id');
+        return $this->hasMany(Attendance::class,'id', 'User_id');
+    }
+    public function result(){
+        return $this->hasMany(Result::class,'id', 'User_id');
     }
 
 }

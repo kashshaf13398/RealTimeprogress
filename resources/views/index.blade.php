@@ -121,7 +121,7 @@
                                         <h4>Free Educations</h4>
                                         <br>
                                         <div class="full center">
-										    <a class="contact_bt" href="{{ route('Courses') }}">Join a Course</a>
+										    <a class="contact_bt" href="{{ url('/courses/dynamic') }}">Join a Course</a>
 										</div>
                                     </div>
                                 </div>

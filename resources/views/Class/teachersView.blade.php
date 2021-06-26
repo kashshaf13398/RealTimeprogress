@@ -16,7 +16,25 @@
                        <a class="hvr-radial-out button-theme" href="{{url('/take/attendance/'.$class->id)}}">Take Attendance</a>
                     </div>
                     <div class="full">
-                        <a class="hvr-radial-out button-theme" href="#">Upload Termtest result</a>
+                        <a class="hvr-radial-out button-theme" href="{{url('/view/attendance/'.$class->id)}}">View Attendance</a>
+                     </div>
+                    <div class="full">
+                        <a class="hvr-radial-out button-theme" href="{{url('/upload/tt/'.$class->id)}}">Upload TT result</a>
+                     </div>
+                     <div class="full">
+                        <a class="hvr-radial-out button-theme" href="{{url('/view/result/tt1/'.$class->id)}}">View TT1</a>
+                     </div>
+                     <div class="full">
+                        <a class="hvr-radial-out button-theme" href="{{url('/view/result/tt2/'.$class->id)}}">View TT2</a>
+                     </div>
+                     <div class="full">
+                        <a class="hvr-radial-out button-theme" href="{{url('/view/result/tt2/'.$class->id)}}">View TT3</a>
+                     </div>
+                     <div class="full">
+                        <a class="hvr-radial-out button-theme" href="#">Post Assignment</a>
+                     </div>
+                     <div class="full">
+                        <a class="hvr-radial-out button-theme" href="#">View Assignment</a>
                      </div>
                 </div>
             </div>

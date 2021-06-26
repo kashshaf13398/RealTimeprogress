@@ -19,5 +19,8 @@ class classes extends Model
     public function attendace(){
         return $this->hasMany(Attendance::class,'id', 'class_id');
     }
+    public function result(){
+        return $this->hasMany(Result::class,'id', 'class_id');
+    }
 
 }

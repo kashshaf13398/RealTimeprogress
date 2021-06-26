@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\classes;
 use App\Student;
 use App\StudentClass;
+use App\Attendance;
 use DB;
 class ClassController extends Controller
 {
@@ -28,8 +29,10 @@ class ClassController extends Controller
     	$post->name=$req->name;
     	$post->description=$req->description;
     	$post->save();
+		$class=$post;
     	//$post =DB::table('classes')->insert($data);
-    	return response()->json($post);
+    	//return response()->json($class->id);
+		return view('Class.teachersView',compact('class'));
     }
 
 	public function getCourse(){
@@ -46,8 +49,12 @@ class ClassController extends Controller
 			
 
 			$studentc= Student::where('class_id','=',$id)->where('User_id','=',auth()->user()->id)->first();
+			$attendance= Attendance::where('class_id','=',$id)->where('User_id','=',auth()->user()->id)->first();
+
 			if ($studentc!= null){
-				return response()->json($studentc->user->name);
+
+				//return response()->json($attendance);
+				return view('Class.studentView',compact('studentc','class','attendance'));
 			}
 			else{
 				return view('Class.studentClass',compact('id'));
@@ -59,8 +66,8 @@ class ClassController extends Controller
 	}
 	public function storeStudent(Request $req,$id){
 		$validatedData = $req->validate([
-			'name' => 'required|unique:students|max:255|min:4',
-			'reg_no' => 'required|unique:students|max:10|min:4',
+			'name' => 'required|max:255|min:4',
+			'reg_no' => 'required|max:10|min:4',
 		]);
 		$student= new Student;
 		$student->User_id=auth()->user()->id;
@@ -69,11 +76,31 @@ class ClassController extends Controller
 		$student->reg_no = $req->reg_no;
 		$student->save();
 
+		$class= classes::find($id);
+		$studentc= Student::where('class_id','=',$id)->where('User_id','=',auth()->user()->id)->first();
+		$att= Attendance::where('class_id','=',$id)->where('User_id','=',auth()->user()->id)->first();
+
+
+		//$temp= Attendance::where('class_id','=',$id)->first();
+		if($att==null){
+			$att= new Attendance;
+			$att->class_id=$id;
+			$att->User_id=auth()->user()->id;
+			$att->score=0;
+			$att->score_by=0;
+			$att->save();
+		}
+		$attendance=$att;
+
 		// $studentclass= new StudentClass;
 		// $studentclass->student_id=$student->id;
 		// $studentclass->class_id=$id;
 		// $studentclass->save();
-		return response()->json($student);
+		return view('Class.studentView',compact('studentc','class','attendance'));
 		//echo "Done";
+	}
+	public function sviewResult1($id){
+		$stu= Student::where('id','=',$id);
+		return response()->json();
 	}
 }

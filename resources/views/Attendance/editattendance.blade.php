@@ -1,7 +1,6 @@
 @extends('test')
-@section('content')
-<hr>
 
+@section('content')
 
 <div class="container">
     <div class="row">
@@ -12,7 +11,7 @@
       </div> -->
       <div class="layout_padding col-lg-6 col-md-6 col-sm-12">
          <div class="contact_form">
-            <form action="{{url('/store/attendance/'.$student[0]->class_id)}}" method="post">
+            <form action="{{url('/update/attendance/'.$attendance->id)}}" method="post">
                 @csrf
                <fieldset>
             
@@ -20,18 +19,18 @@
                     <tr>
                         <th>Reg no</th>
                         <th>Student Name</th>
+                        <th>Attendance</th>
                         
-                        <th>Present</th>
                     </tr>
-                    @foreach($student as $row)
                     <tr>
-                        <td>{{ $row->reg_no }}</td>
-                        <td>{{ $row->name }}</td>
+                        <td>{{ $attendance->student->reg_no }}</td>
+                        <td>{{ $attendance->student->name }}</td>
+                        {{-- <td>{{ $attendance->score }}</td> --}}
                         <td>
-                            <input type="radio" id="present" name="{{$row->User_id}}" value="present">
+                            <input type="number" value="{{$attendance->score}}" name="score" />
                         </td>
                     </tr>
-                    @endforeach
+                    
                 </table>
                 
             
@@ -46,11 +45,5 @@
     </div>             
 </div>
 </div>
-
-
-
-
-
-
-
+    
 @endsection

@@ -12,23 +12,27 @@
       </div> -->
       <div class="layout_padding col-lg-6 col-md-6 col-sm-12">
          <div class="contact_form">
-            <form action="{{url('/store/attendance/'.$student[0]->class_id)}}" method="post">
+            
+            <form action="{{url('/store/result/'.$stu[0]->class_id)}}" method="post">
                 @csrf
                <fieldset>
+                <input type="text" placeholder="TT Name" name="tt_name" />
+                <input type="number" placeholder="Total Marks" name="score_by" />
+                <hr>
             
                 <table class="table table-responsive">
                     <tr>
                         <th>Reg no</th>
                         <th>Student Name</th>
                         
-                        <th>Present</th>
+                        <th>number</th>
                     </tr>
-                    @foreach($student as $row)
+                    @foreach($stu as $row)
                     <tr>
                         <td>{{ $row->reg_no }}</td>
                         <td>{{ $row->name }}</td>
                         <td>
-                            <input type="radio" id="present" name="{{$row->User_id}}" value="present">
+                            <input type="number" value="" name="{{$row->User_id}}" />
                         </td>
                     </tr>
                     @endforeach
