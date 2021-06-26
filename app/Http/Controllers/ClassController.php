@@ -99,8 +99,5 @@ class ClassController extends Controller
 		return view('Class.studentView',compact('studentc','class','attendance'));
 		//echo "Done";
 	}
-	public function sviewResult1($id){
-		$stu= Student::where('id','=',$id);
-		return response()->json();
-	}
+	
 }

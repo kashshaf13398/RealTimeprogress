@@ -22,5 +22,8 @@ class classes extends Model
     public function result(){
         return $this->hasMany(Result::class,'id', 'class_id');
     }
+    public function post(){
+        return $this->hasMany(Post::class,'id', 'class_id');
+    }
 
 }

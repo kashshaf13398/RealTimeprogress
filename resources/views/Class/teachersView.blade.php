@@ -31,10 +31,10 @@
                         <a class="hvr-radial-out button-theme" href="{{url('/view/result/tt2/'.$class->id)}}">View TT3</a>
                      </div>
                      <div class="full">
-                        <a class="hvr-radial-out button-theme" href="#">Post Assignment</a>
+                        <a class="hvr-radial-out button-theme" href="{{url('/upload/assignment/'.$class->id)}}">Post Assignment</a>
                      </div>
                      <div class="full">
-                        <a class="hvr-radial-out button-theme" href="#">View Assignment</a>
+                        <a class="hvr-radial-out button-theme" href="{{url('/view/assignment/'.$class->id)}}">View Assignment</a>
                      </div>
                 </div>
             </div>

@@ -64,3 +64,11 @@ Route::get('/sview/tt1/{id}','ResultController@sviewResult1')->name('sview.resul
 Route::get('/sview/tt2/{id}','ResultController@sviewResult2')->name('sview.result2');
 
 Route::get('/sview/tt3/{id}','ResultController@sviewResult3')->name('sview.result3');
+
+Route::get('/upload/assignment/{id}','PostController@getAssignmentPage');
+
+Route::post('/store/assignment/{id}','PostController@storeAssignment');
+
+Route::get('/view/assignment/{id}','PostController@getAssignmentPage');
+
+Route::get('/sview/assignment/{id}','PostController@getstAssignmentPage');

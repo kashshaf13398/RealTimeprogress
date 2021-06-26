@@ -24,6 +24,9 @@
                      <div class="full">
                         <a class="hvr-radial-out button-theme" href="{{url('/sview/tt3/'.$studentc->id)}}">View TT3</a>
                      </div>
+                     <div class="full">
+                        <a class="hvr-radial-out button-theme" href="{{url('/sview/assignment/'.$studentc->id)}}">View Assignment</a>
+                     </div>
                 </div>
             </div>
             <div class="col-md-6">
