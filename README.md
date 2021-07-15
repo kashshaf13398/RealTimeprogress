@@ -1,78 +1,122 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+### CSE 446 : Web Technologies
+ 
+# Real time Progress
+ 
+ 
+ 
+ 
+It's a web project build by Laravel for the course CSE 446 : Web Technology. The owner of this project is:
+ 
+ 
+- Kashshaf Mahbub
+ 
+  Reg No: 2016331016,
+ 
+  Student of CSE, SUST
+ 
+  Email: sakif1327@gmail.com
+ 
+  Github: https://github.com/kashshaf13398
+ 
+ 
+ 
+ 
+ 
+## Motivation
+ 
+Motivation of my project is to build a web application by which teachers can take attendance of students of sust cse, upload term-test results and can post any assignments ar regular post in a class room and students can join the class and can see the real time progress of their attendances, Term test results and see assignment posts.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+ 
+ 
+ 
+ 
+## Features
+ 
+ 
+- User register and login
+ 
+- Any user can create classroom.
+ 
+- Students can join a classroom.
+ 
+- Teachers can upload TT results.
+ 
+- Teachers can take attendance any time easily via our web application.
+ 
+- Teachers can post assignment posts or any post.
+- Students can watch realtime attendaces, Term test results and the posts in the classroom and see the realtime progress on the course
 
-## About Laravel
+ 
+ 
+## Requriments
+ 
+Real time progress is a web application, built in Laravel. So, we need following requirements to run our project.
+ 
+- PHP  >= 7.3.3
+ 
+We also need some PHP extension they are basically integreted with PHP.
+- Composer
+- Xampp
+- MySQL
+- Laravel
+- Google Captcha API
+- Google Drive API
+- Source Code Editor: Visual Studio Code
+ 
+ 
+## PHP Version Check
+To check if PHP is already install in the system or to check the version we can run the simple command:
+ 
+```sh
+php --version
+```
+ 
+To install PHP we can simply follow the instructions of this site:
+https://www.sitepoint.com/how-to-install-php-on-windows/
+ 
+## XAMPP Istallation
+To install XAMPP, we need to visit the following link:
+https://www.apachefriends.org/index.html
+ 
+From there, we have to download appropriate XAMPP version.
+ 
+## Composer Istallation
+ 
+To manually download composer, we need to visit the following link and download exe file:
+https://getcomposer.org/download/
+ 
+For command line installation, we need to run the following commands:
+ 
+```sh
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+```
+ 
+## LARAVEL Istallation
+First, download the Laravel installer using Composer:
+```sh
+composer global require laravel/installer
+```
+ 
+To create new project , we can run the following command:
+```sh
+composer create-project --prefer-dist laravel/laravel blog "6.*" Real_time_project
+```
+ 
+To run project, we can run the following command:
+ 
+```sh
+php artisan serve
+```
+ 
+To know more about laravel, we can follow the instructions of this link:
+https://laravel.com/docs/6.x
+ 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+ 
+ 
+## Clone and run project from Github:
+We can follow this tutorial, to clone and run project from github:
+https://www.youtube.com/watch?v=D5MZaCmpxvM
